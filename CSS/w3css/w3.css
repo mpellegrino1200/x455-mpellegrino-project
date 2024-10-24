@@ -806,8 +806,10 @@ a {
 }
 .w3-display-topright {
   position: absolute;
-  right: 0;
-  top: 0;
+  top: 35%;
+  right: 5%;
+  transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
 }
 .w3-display-bottomleft {
   position: absolute;
@@ -1271,12 +1273,12 @@ a {
 .w3-indigo,
 .w3-hover-indigo:hover {
   color: #fff !important;
-  background-color: #3f51b5 !important;
+  background-color: #eed3e7 !important;
 }
 .w3-khaki,
 .w3-hover-khaki:hover {
   color: #000 !important;
-  background-color: #f0e68c !important;
+  background-color: #fffcf5 !important;
 }
 .w3-lime,
 .w3-hover-lime:hover {
@@ -1291,27 +1293,27 @@ a {
 .w3-deep-orange,
 .w3-hover-deep-orange:hover {
   color: #fff !important;
-  background-color: #ff5722 !important;
+  background-color: #f3d9e3 !important;
 }
 .w3-pink,
 .w3-hover-pink:hover {
   color: #fff !important;
-  background-color: #e91e63 !important;
+  background-color: #ffe3ec !important;
 }
 .w3-purple,
 .w3-hover-purple:hover {
   color: #fff !important;
-  background-color: #9c27b0 !important;
+  background-color: #fff7fe !important;
 }
 .w3-deep-purple,
 .w3-hover-deep-purple:hover {
   color: #fff !important;
-  background-color: #673ab7 !important;
+  background-color: #fdf8ff !important;
 }
 .w3-red,
 .w3-hover-red:hover {
   color: #fff !important;
-  background-color: #f44336 !important;
+  background-color: #ffeffc !important;
 }
 .w3-sand,
 .w3-hover-sand:hover {
@@ -1321,7 +1323,7 @@ a {
 .w3-teal,
 .w3-hover-teal:hover {
   color: #fff !important;
-  background-color: #009688 !important;
+  background-color: #e5ffea !important;
 }
 .w3-yellow,
 .w3-hover-yellow:hover {
@@ -1367,7 +1369,7 @@ a {
 .w3-pale-green,
 .w3-hover-pale-green:hover {
   color: #000 !important;
-  background-color: #ddffdd !important;
+  background-color: #e2eddfc1 !important;
 }
 .w3-pale-yellow,
 .w3-hover-pale-yellow:hover {
@@ -1379,9 +1381,9 @@ a {
   color: #000 !important;
   background-color: #ddffff !important;
 }
-.w3-text-amber,
-.w3-hover-text-amber:hover {
-  color: #ffc107 !important;
+.w3-text-perple,
+.w3-hover-text-perple:hover {
+  color: #f9effe !important;
 }
 .w3-text-aqua,
 .w3-hover-text-aqua:hover {

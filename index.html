@@ -4,16 +4,137 @@
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./CSS/w3css/w3.css">
+<style>
+    body {
+      font-family: "Times New Roman", Georgia, Serif;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 5px;
+    }
+    .my-scrolling {
+        height: 200px;
+        overflow: auto;
+      }
+    @media screen and (max-width: 600px) {
+        #r1c1,
+        #r1c2,
+        #r2c1,
+        #r2c2 {width: 100%;}
+    }
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  padding: 10px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+    /* accordion button hover */
+    #accordionBtn1:hover,
+      #accordionBtn2:hover {
+        background-color: blanchedalmond !important;
+      }
+  </style>
 </head>
 <body>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>MarieKay</b> Design</a>
+  <div class="w3-bar w3-purple w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button w3-text-black"><b>MarieKay</b> Designs</a>
+    <div>
+        <a class="w3-padding-large w3-hide-small w3-right">
+        <i class="fa fa-shopping-basket w3-text-black"></i>
+        </a>
+    </div>
+    <div>
+        <a class="w3-padding-large w3-hide-small w3-right">
+        <i class="fa fa-search w3-text-black"></i>
+        </a>
+    </div>
     <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
+    <div class="w3-right w3-hide-small w3-text-black">
       <a href="#Harvest" class="w3-bar-item w3-button">What's New</a>
       <a href="#All" class="w3-bar-item w3-button">Browse</a>
       <a href="#Appointment" class="w3-bar-item w3-button">Appointments</a>
@@ -26,36 +147,49 @@
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="./img/coverpage.jpg" alt="Architecture" width="1500" height="800">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-white w3-opacity-min"><b>MarieKay</b></span> <span class="w3-hide-small w3-text-light-grey">Design</span></h1>
+  <img class="w3-image" src="./img/englishsummer-1.jpg" alt="Architecture" width="1500" height="800">
+  <div class="w3-display-topright w3-margin-bottom">
+    <h1 class="w3-xxxlarge w3-text-white"><span class="w3-text-white"><b>MarieKay</b></span> <span class="w3-padding w3-text-white w3-opacity-min">Designs</span></h1>
   </div>
 </header>
 
 <!-- Page content -->
 <div class="w3-content w3-padding" style="max-width:1564px">
 
-   <!-- Newest Collection Section -->
-   <div class="w3-row w3-padding-64" id="Harvest">
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
     <div class="w3-col m6 w3-padding-large w3-hide-small">
-     <img src="./img/20240822-honeyharvest_cover_mobile_lookbook.png" class="w3-round w3-image w3-opacity-min w3-padding-64" alt="Table Setting" width="600" height="750">
      <img src="./img/3.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
     </div>
 
-    <div class="w3-col m6 w3-padding-medium">
-      <h1 class="w3-center">Newest Collections</h1><br>
-      <h5 class="w3-center">The Essence Behind the Collection</h5>
-      <p class="w3-medium">The Spring 2024 collection of dresses captures the vibrant essence of nature through a stunning interplay of mosaics, colorful patterns, and floral motifs. Each piece is a celebration of renewal, where bold hues and intricate designs converge to evoke the beauty of blossoming gardens. The collection draws inspiration from the rich textures and shapes found in mosaic art, transforming them into fluid silhouettes that dance with movement. As the dresses flutter in the breeze, they invite wearers to embrace the joy of spring, reflecting a harmonious blend of artistry and the effervescent spirit of the season.</p>
-      <p class="w3-padding-24"></p>
-      <h5 class="w3-center">Our Designers</h5>
-      <p class="w3-medium"> Floriana Mosaic is renowned for her ability to blend art and fashion, drawing inspiration from her travels to vibrant marketplaces around the world. With a background in fine arts, she meticulously studies color theory and texture, infusing each dress with a unique narrative. Vividra Atelier,  combines eco-friendly materials with bold, eye-catching designs, making each collection not only stylish but also environmentally conscious. For the Spring 2024 line, Vividra experimented with digital printing techniques, allowing for vibrant floral patterns that celebrate the season's essence while minimizing waste. Together, these designers have created a collection that harmonizes artistry and sustainability, inviting wearers to step into a world of color and creativity.</p>
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Our Newest Collections</h1><br>
+      <h5 class="w3-center">The Essence Behind the Collections</h5>
+      <p class="w3-medium">The <a href=https://app.houseofcb.com/campaign?campaign_id>Spring 2024 Collection</a> 
+        of dresses captures the vibrant essence of nature through a stunning interplay of mosaics, 
+        colorful patterns, and floral motifs. Each piece is a celebration of renewal, where bold hues
+        and intricate designs converge to evoke the beauty of blossoming gardens. The collection draws
+        inspiration from the rich textures and shapes found in mosaic art, transforming them into fluid
+        silhouettes that dance with movement. As the dresses flutter in the breeze, they invite wearers
+        to embrace the joy of spring, reflecting a harmonious blend of artistry and the effervescent spirit
+        of the seasoning each dress with a unique narrative.</p>
+      <p class="w3-medium w3-text-grey">A Note On Our Designers: <a href="https://app.houseofcb.com/brand?_gl=1*1gb4vj6*_gcl_aw*R0NMLjE3Mjg5NTU0MDcuQ2owS0NRandnck80QmhDMkFSSXNBS1E3elVuZ0p4eDRWQklRT3FjRDY1TFFEYWRqclNuT0NOQXZiNVIzX2tuc0paVlExWnp6YUJ6VEZwQWFBa241RUFMd193Y0I.*_ga*MTQxNTcxNDA0MC4xNzI3Mzc1OTQ0*_ga_HYKE7BZ13R*MTcyOTU0MTM5My42LjAuMTcyOTU0MTM5Ni41Ny4wLjA.">Floriana Mosaic</a> 
+        is renowned for her ability to blend art and fashion, drawing inspiration from her travels to vibrant
+        marketplaces around the world. With a background in fine arts, she meticulously studies color theory 
+        and texture, infusing each dress with a unique narrative. Vividra Atelier, combines eco-friendly materials 
+        with bold, eye-catching designs, making each collection not only stylish but also environmentally conscious. 
+        For the Spring 2024 line, Vividra experimented with digital printing techniques, allowing for vibrant floral 
+        patterns that celebrate the season's essence while minimizing waste. Together, these designers have created 
+        a collection that harmonizes artistry and sustainability, inviting wearers to step into a world of color and 
+        creativity.</p>  
     </div>
-  </div>
+</div>
+
 <hr>
 
   <!-- Browse/All Collections Section -->
   <div class="w3-container w3-padding-32" id="All">
-    <h3 class="w3-padding-16">Browse By Collection</h3>
+    <h3 class="w3-padding-10">Browse By Collection</h3>
     <p>All collections by MarieKay are hand designed, crafted to embody the essence of timeless elegance and contemporary artistry. Each piece tells a unique story, seamlessly blending luxurious materials with innovative silhouettes that celebrate individuality and sophistication.
         Our latest collections are hand-designed and meticulously crafted to embody the essence of timeless elegance and contemporary artistry. Each piece is a unique expression, seamlessly blending luxurious materials with innovative silhouettes that celebrate individuality and sophistication. 
         <br>
@@ -93,6 +227,34 @@
       <p>Be daring and classy.</p>
       <p><button class="w3-button w3-light-grey w3-block">Shop Now</button></p>
     </div>
+
+<!-- SCROLLABLE TEXT SECTION-->
+<div class="w3-row">
+            <div class="w3-padding w3-perple">
+              <div
+                class="w3-pale-green w3-text-black w3-center"
+                style="
+                  margin-left: -16px;
+                  margin-right: -16px;
+                  margin-top: -18px;
+                "
+              >
+                <h2>The Details Behind the Design</h2>
+              </div>
+              <div class="my-scrolling w3-text-black" style="padding-right: 10px" >
+                <p>
+                    The MarieKay fashion brand, renowned for its elegant and contemporary aesthetic, embodies a meticulous design philosophy 
+                    that harmoniously blends timeless sophistication with modern innovation. Each collection is a careful interplay of rich textures 
+                    and carefully chosen color palettes, reflecting the brand's commitment to quality and artistry. The design process begins with an 
+                    extensive exploration of fabric, emphasizing sustainability and ethical sourcing; luxurious materials like organic cotton, eco-friendly 
+                    linens, and innovative blends are selected to ensure both comfort and durability. This dedication to sustainability extends to the production 
+                    methods, which prioritize low-waste techniques and local craftsmanship, celebrating artisanal skills while minimizing the environmental footprint. 
+                    The silhouette of MarieKay garments often features clean lines and tailored cuts, allowing for versatility that seamlessly transitions from day to night. 
+                    Signature elements, such as intricate stitching, unique draping, and thoughtful detailing, are thoughtfully integrated to enhance each piece's individuality 
+                    without overshadowing its wearability. Inspired by a diverse array of cultural influences and art movements, MarieKay's designs frequently incorporate bold 
+                    prints and distinctive patterns that evoke a sense of global sophistication. Moreover, the brand pays homage to the power of personalization, offering customizable options that empower customers to express their unique style, thus fostering a deeper connection between the wearer and the garment. Accessories, a crucial component of the MarieKay aesthetic, are designed to complement the clothing line while featuring innovative designs that make a statement on their own. The brand's commitment to inclusivity is reflected in its size range, ensuring that everyone can find something that resonates with their personal style. MarieKay also places a strong emphasis on storytelling, with each collection accompanied by a narrative that connects the design elements to broader themes of empowerment and self-expression, creating a richer experience for customers.
+                </p>
+              </div>
   </div>
 
   <hr>
@@ -141,42 +303,213 @@
 
   <hr>
 
+
+<!-- LIGHTBOX IMAGES  -->
+<div class="w3-container w3-padding-32" id="Bridal">
+    <h3 class="w3-padding-16">Bridal Collection</h3>
+</div>
+<!-- IMAGE 1  -->
+
+
+
+
+
+
+
+<hr>
+
    <!-- About Us Section w carousel-->
    <div class="w3-container w3-padding-32" id="AboutUs">
     <h3 class="w3-padding-10">About Us</h3>
-    <!-- ADD CAROUSEL OF IMAGES AND YOUTUBE VIDEOS HERE -->
-    <h3 class="w3-padding-16 w3-medium">More About Our Founder</h3>
-    <p>Conna Walker started House of CB at 17 by borrowing $3,880 from her father. Eight years later, the brand, characterized by figure-hugging women's clothes, has over 40 retail locations, 2.5 million followers on social and pulled in $15 million in 2018 profits. Her goal? To hire, support and connect with women.
-      </p>
-     <!-- add drop down bar here -->
-    <h3 class="w3-padding-16 w3-medium">Our Sustainability Commitment</h3>
-      <!-- add drop down bar here -->
-    <p>Over the past few years, we have made the active choice to increase our use of natural based fabrics. This allowed our latest collections to be made from 90% natural fibres such as, Cotton, Lyocell, and Acetate. As we are committed to reducing waste, we decided to only produce our styles in strictly limited quantities. This allows us to avoid overproduction and have a real impact on waste. 
-    </p>
-  </div>
+
+
+<!-- ADD CAROUSEL OF IMAGES AND YOUTUBE VIDEOS HERE -->
+<!-- carousel -->
+        <!-- add thumbnail buttons for selecting a slide to show -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="./img/20240712-capri_cover.avif" style="width:100%">
+              <div class="text">Summer Breeze</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="./img/20240409-lapetale_cover.avif" style="width:100%">
+              <div class="text">Honey Harvest</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="./img/20241009-theenchantedhour_cover.avif" style="width:100%">
+              <div class="text">Luxe Chic</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+  
+<br>
+
+<div class="w3-padding-30">
+    <p>At MarieKay, our mission is to empower women through the transformative power of fashion. We believe that clothing is more than just fabric; it’s a canvas for self-expression, a tool for confidence, and a vehicle for change. Our commitment is to create stylish, sustainable, and inclusive designs that celebrate the diversity and strength of women around the world.
+    We strive to inspire individuality and foster a sense of belonging, recognizing that every woman deserves to feel beautiful, confident, and empowered in her own skin. Through our thoughtfully crafted collections, we aim to uplift voices and support initiatives that promote women's rights and equality, ensuring that our impact extends beyond the realm of fashion.
+    We prioritize ethical practices, sourcing materials that are not only environmentally friendly but also support fair labor conditions. By collaborating with artisans and communities, we are dedicated to promoting craftsmanship and preserving cultural heritage, all while providing women with the opportunity to thrive. Together, we aspire to create a world where every woman can express her identity through fashion, break barriers, and realize her full potential. Join us on this journey to celebrate femininity, foster empowerment, and redefine beauty standards—one stitch at a time.</p>
+</div>
+
+<br>
+
+<!-- ACCORDION -->
+    <div class="w3-row">
+        <div class="w3-col s6 w3-left" style="padding-right: 3px">
+          <button
+            onclick="myAccordion('accordion1')"
+            class="w3-button w3-block w3-pale-green w3-center-align"
+            id="accordionBtn1"
+          >
+            <h4>More About Our Founder <i class="fa fa-caret-down"></i></h4>
+          </button>
+          <div
+            id="accordion1"
+            class="w3-hide w3-container"
+            style="height: 260px"
+          >
+          <p>
+            Marie Kay Pellegrino, a former art student with a passion for textiles, founded MarieKay Designs 
+            in her tiny apartment. Inspired by her grandmother's vintage clothing collection, 
+            she began creating unique, handcrafted pieces that blended modern trends with nostalgic 
+            charm. After sharing her designs on social media, she quickly gained a loyal following, 
+            leading to her first pop-up shop. Through word-of-mouth and community engagement, her 
+            brand blossomed, attracting attention from local boutiques. Today, MarieKay Designs 
+            is celebrated for its sustainable practices and one-of-a-kind fashion, reflecting 
+            Marie's artistic vision and commitment to quality.
+        </p>
+          </div>
+        </div>
+        <div class="w3-col s6 w3-left" style="padding-left: 3px">
+          <button
+            onclick="myAccordion('accordion2')"
+            class="w3-button w3-block w3-pale-green w3-center-align"
+            id="accordionBtn1"
+          >
+            <h4>Sustainability Commitment <i class="fa fa-caret-down"></i></h4>
+          </button>
+          <div
+            id="accordion2"
+            class="w3-hide w3-container"
+            style="height: 260px"
+          >
+          <p>Over the past few years, we have made the active choice to increase our use of natural based fabrics. 
+            This allowed our latest collections to be made from 90% natural fibres such as, Cotton, Lyocell, and Acetate. As we are committed to 
+            reducing waste, we decided to only produce our styles in strictly limited quantities. 
+            This allows us to avoid overproduction and have a real impact on waste. MarieKay is redefining the fashion 
+            landscape with its unwavering commitment to sustainability. 
+            Emphasizing eco-friendly practices, the brand sources organic and recycled materials for its stylish collections, 
+            ensuring that every piece reflects a dedication to the planet. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End page content -->
+<br>
+<hr>
+
+ <!-- Youtube and Accordion Section -->
+ <div class="w3-padding-60" id="cuttery">
+    <h3 class="w3-padding-10 w3-center">Explore MarieKay in Action</h3>
+    <br>
+    <div class="w3-row">
+      <div class="w3-col m4 w3-center">
+        <iframe
+          height="300"
+          src="https://www.youtube.com/embed/G-Fg7l7G1zw"
+          title="Basic Knife Skills"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+        >
+        </iframe>
+      </div>
+      <div class="w3-col m4 w3-center">
+        <iframe
+          height="300"
+          src="https://www.youtube.com/embed/Wk3scs5FqCY"
+          title="Basic Knife Skills"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+        >
+        </iframe>
+      </div>
+      <div class="w3-col m4 w3-center">
+        <iframe
+          height="300"
+          src="https://www.youtube.com/embed/t0jcNefEiBM"
+          title="Basic Knife Skills"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+        >
+        </iframe>
+      </div>
+    </div>
+
+
+
 
   <hr>
 
   <!-- Appointments Section -->
   <div class="w3-container w3-padding-32" id="Appointment">
     <h3 class="w3-padding-16">Appointments</h3>
-     <!-- ADD TABLE HERE-->
+    <table class="w3-table-all">
+        <tr class="w3-pale-green w3-text-black">
+          <th>SERVICE</th>
+          <th>1 HOUR</th>
+          <th>2 HOUR</th>
+          <th>3 HOUR</th>
+        </tr>
+        <tr>
+          <td>BRIDAL</td>
+          <td>$50</td>
+          <td>$100</td>
+          <td>$400</td>
+        </tr>
+        <tr>
+            <td>STYLING</td>
+            <td>$55</td>
+            <td>$165</td>
+            <td>$350</td>
+        </tr>
+        <tr>
+            <td>GENERAL FITTING</td>   
+            <td>$55</td>
+            <td>$65</td>
+            <td>$105</td>
+        </tr>
+        </table>
+
     <p>Lets get in touch and set up your next appointment.</p>
     <form action="/action_page.php" target="_blank">
       <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
       <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
       <input class="w3-input w3-section w3-border" type="text" placeholder="Appointment Type" required name="Appointment Type">
       <input class="w3-input w3-section w3-border" type="text" placeholder="Special Requests" required name="Special Requests">
-      <button class="w3-button w3-black w3-section" type="submit">
+      <button class="w3-button w3-border w3-purple w3-text-black w3-section" type="submit">
         <i class="fa fa-paper-plane"></i> REQUEST APPOINTMENT
       </button>
     </form>
   </div>
-
   
-<!-- Image of location/map -->
-<div class="w3-container">
-  <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+<!-- Image of MarieKay storefront -->
+<div class="w3-container w3-center">
+  <img src="./img/footer.jpg" class="w3-image" style="width:100%">
+  <p>Find Us At: <b>11 Florida Street New York City, New York 92512</b></p>
 </div>
 
 <!-- End page content -->
@@ -184,9 +517,63 @@
 
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>MarieKay Designs</p>
+<footer class="w3-center w3-purple w3-padding-16">
+  <p class="w3-text-black">MarieKay Designs</p>
+  <div>
+    <a class="w3-padding-large w3-hide-small w3-center">
+    <i class="fa fa-twitter w3-text-black"></i>
+    <i class="fa fa-instagram w3-text-black"></i>
+    <i class="fa fa-youtube w3-text-black"></i>
+    <i class="fa fa-facebook w3-text-black"></i>
+    </a>
+</div>
 </footer>
+
+<!-- JAVASCRIPT IS ALL HERE -->
+
+<script>
+// START added for carousel
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+// end added for carousel
+// START added for accordion
+    function myAccordion(id) {
+var x = document.getElementById(id);
+if (x.className.indexOf("w3-show") == -1) {
+  x.className += " w3-show";
+  x.previousElementSibling.className =
+    x.previousElementSibling.className.replace("w3-black", "w3-light-grey");
+} else {
+  x.className = x.className.replace(" w3-show", "");
+  x.previousElementSibling.className =
+    x.previousElementSibling.className.replace("w3-black", "w3-light-grey");
+}
+}
+// end added for accordion
+    </script>
 
 </body>
 </html>
