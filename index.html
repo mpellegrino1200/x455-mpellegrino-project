@@ -6,6 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./CSS/w3css/w3.css">
+<script
+type="text/JavaScript"
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+></script>
+<script
+type="text/JavaScript"
+src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"
+></script>
 <style>
     body {
       font-family: "Times New Roman", Georgia, Serif;
@@ -265,58 +273,198 @@
     <p>The Spring 2024 bridal collection from MarieKay Designs showcases a stunning blend of classic elegance and modern innovation. Drawing inspiration from ethereal landscapes, the collection features flowing silhouettes crafted from luxurious fabrics like silk chiffon and intricate lace, adorned with hand-embroidered florals and delicate beadwork. Each gown captures a sense of romantic whimsy, with soft pastel hues and striking architectural details that highlight the bride’s individuality. Accessories, including dramatic veils and bespoke headpieces, complement the dresses, creating an enchanting vision for the contemporary bride seeking sophistication and artistry on her special day.
     </p>
   </div>
-<!-- ADD ALL LIGHTBOXES TO EACH IMAGES -->
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="./img/martine-8974-3.avif" alt="John" style="width:100%">
-      <h3 class="w3-medium">Mariana Bejeweled Dress</h3>
+  <!-- LIGHTBOX IMAGES  -->
+  <!-- first row of thumbnail images created below -->
+  <div class="w3-row-padding" style="margin: 15px 0px">
+    <!-- FIRST ROW OF IMAGES HERE -->
+    <!-- IMAGE 1  -->
+    <div class="w3-col s3">
+      <img
+        src="./img/martine-8974-3.avif"
+        style="width: 100%; cursor: zoom-in"
+        onclick="document.getElementById('modal01').style.display='block'"
+        class="w3-hover-shadow"
+      />
+      <h3 class="w3-small w3-center">Mariana Bejeweled Dress</h3>
+       <!-- IMAGE 2  -->
+      <img
+        src="./img/gabrielle-9826-1.avif"
+        style="width: 100%; cursor: zoom-in"
+        onclick="document.getElementById('modal02').style.display='block'"
+        class="w3-hover-shadow"
+      />
+      <h3 class="w3-small w3-center">Cake Topper Dress</h3>
+       <!-- IMAGE 3  -->
     </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="./img/nathalie-9830-3.avif" alt="Jane" style="width:100%">
-      <h3 class="w3-medium">Fairytale (Corset) Dress</h3>
+    <div class="w3-col s3">
+        <img
+        src="./img/emiliew29.png"
+        style="width: 100%; cursor: zoom-in"
+        onclick="document.getElementById('modal03').style.display='block'"
+        class="w3-hover-shadow"
+      />
+      <h3 class="w3-small w3-center">Fly Away Dress</h3>
+        <!-- IMAGE 4  -->
+        <img
+          src="./img/nathalie-9830-3.avif"
+          style="width: 100%; cursor: zoom-in"
+          onclick="document.getElementById('modal04').style.display='block'"
+          class="w3-hover-shadow"
+        />
+        <h3 class="w3-small w3-center">Ball Gown Dress</h3>
     </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="./img/delphine-white-12.avif" alt="Mike" style="width:100%">
-      <h3 class="w3-medium">Escape to Paradise Dress</h3>
+    <div class="w3-col s3">
+        <!-- IMAGE 5  -->
+        <img
+          src="./img/fairytalew31.png"
+          style="width: 100%; cursor: zoom-in"
+          onclick="document.getElementById('modal05').style.display='block'"
+          class="w3-hover-shadow"
+        />
+        <h3 class="w3-small w3-center">Fairytale Dress</h3>
+        <!-- IMAGE 6  -->
+        <img
+          src="./img/delphine-white-12.avif"
+          style="width: 100%; cursor: zoom-in"
+          onclick="document.getElementById('modal06').style.display='block'"
+          class="w3-hover-shadow"
+        />
+        <h3 class="w3-small w3-center">Escape to Paradise Dress</h3>
+      </div>
+      <div class="w3-col s3">
+        <!-- IMAGE 7  -->
+        <img
+          src="./img/antoniette-white-14.avif"
+          style="width: 100%; cursor: zoom-in"
+          onclick="document.getElementById('modal07').style.display='block'"
+          class="w3-hover-shadow"
+        />
+        <h3 class="w3-small w3-center">Princess Dress</h3>
+        <!-- IMAGE 8  -->
+        <img
+          src="./img/noele-8971-2.avif"
+          style="width: 100%; cursor: zoom-in"
+          onclick="document.getElementById('modal08').style.display='block'"
+          class="w3-hover-shadow"
+        />
+        <h3 class="w3-small w3-center">Dance All Night Dress</h3>
+      </div>
+<!-- IMAGE 1 MODAL  -->
+<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+    <!-- add close button-->
+    <span
+      class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+      style="cursor: pointer"
+      >&times;</span
+    >
+    <!-- add modal background image -->
+    <div class="w3-modal-content w3-animate-zoom">
+      <h4 class="w3-center">Mariana Bejeweled Dress - $1034</h4>
+      <img src="./img/martine-8974-3.avif" style="width: 100%" />
     </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="./img/emiliew29.png" alt="Dan" style="width:100%">
-      <h3 class="w3-medium">Fly Away Dress</h3>
+  </div>
+<!-- IMAGE 2  MODAL-->
+<div id="modal02" class="w3-modal" onclick="this.style.display='none'">
+    <!-- add close button-->
+    <span
+      class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+      style="cursor: pointer"
+      >&times;</span
+    >
+    <!-- add modal background image -->
+    <div class="w3-modal-content w3-animate-zoom">
+      <h4 class="w3-center">Cake Topper Dress - $1500</h4>
+      <img src="./img/gabrielle-9826-1.avif" style="width: 100%" />
     </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-        <img src="./img/gabrielle-9826-1.avif" alt="Dan" style="width:100%">
-        <h3 class="w3-medium">Cake Topper Dress</h3>
-      </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
-        <img src="./img/noele-8971-2.avif" alt="Dan" style="width:100%">
-        <h3 class="w3-medium">Ball Dress</h3>
-      </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-        <img src="./img/gabrielle-1.png" alt="Dan" style="width:100%">
-        <h3 class="w3-medium">Ainsley Strapless Dress</h3>
-      </div>
-      <div class="w3-col l3 m6 w3-margin-bottom">
-        <img src="./img/fairytalew31.png" alt="Dan" style="width:100%">
-        <h3 class="w3-medium">Kailey Strapless Dress</h3>
-      </div>
+  </div>
+<!-- IMAGE 3 MODAL -->
+<div id="modal03" class="w3-modal" onclick="this.style.display='none'">
+    <!-- add close button-->
+    <span
+      class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+      style="cursor: pointer"
+      >&times;</span
+    >
+    <!-- add modal background image -->
+    <div class="w3-modal-content w3-animate-zoom">
+      <h4 class="w3-center">Fly Away Dress  - $1231</h4>
+      <img src="./img/emiliew29.png" style="width: 100%" />
+    </div>
+  </div>
+<!-- IMAGE 4  MODAL-->
+<div id="modal04" class="w3-modal" onclick="this.style.display='none'">
+    <!-- add close button-->
+    <span
+      class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+      style="cursor: pointer"
+      >&times;</span
+    >
+    <!-- add modal background image -->
+    <div class="w3-modal-content w3-animate-zoom">
+      <h4 class="w3-center">Ball Gown Dress  - $1422</h4>
+      <img src="./img/nathalie-9830-3.avif" style="width: 100%" />
+    </div>
+  </div>
+<!-- IMAGE 5  MODAL-->
+<div id="modal05" class="w3-modal" onclick="this.style.display='none'">
+    <!-- add close button-->
+    <span
+      class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+      style="cursor: pointer"
+      >&times;</span
+    >
+    <!-- add modal background image -->
+    <div class="w3-modal-content w3-animate-zoom">
+      <h4 class="w3-center">Fairytale Dress  - $2300</h4>
+      <img src="./img/fairytalew31.png" style="width: 100%" />
+    </div>
+  </div>
+<!-- IMAGE 6  MODAL-->
+<div id="modal06" class="w3-modal" onclick="this.style.display='none'">
+    <!-- add close button-->
+    <span
+      class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+      style="cursor: pointer"
+      >&times;</span
+    >
+    <!-- add modal background image -->
+    <div class="w3-modal-content w3-animate-zoom">
+      <h4 class="w3-center">Escape to Paradise Dress  - $1890</h4>
+      <img src="./img/delphine-white-12.avif" style="width: 100%" />
+    </div>
+  </div>
+  <!-- IMAGE 7  MODAL-->
+<div id="modal07" class="w3-modal" onclick="this.style.display='none'">
+    <!-- add close button-->
+    <span
+      class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+      style="cursor: pointer"
+      >&times;</span
+    >
+    <!-- add modal background image -->
+    <div class="w3-modal-content w3-animate-zoom">
+      <h4 class="w3-center">Princess Dress  - $850</h4>
+      <img src="./img/antoniette-white-14.avif" style="width: 100%" />
+    </div>
+  </div>
+  <!-- IMAGE 8  MODAL-->
+  <div id="modal08" class="w3-modal" onclick="this.style.display='none'">
+    <!-- add close button-->
+    <span
+      class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+      style="cursor: pointer"
+      >&times;</span
+    >
+    <!-- add modal background image -->
+    <div class="w3-modal-content w3-animate-zoom">
+      <h4 class="w3-center">Dance All Night Dress  - $950</h4>
+      <img src="./img/noele-8971-2.avif" style="width: 100%" />
+    </div>
   </div>
 
-  <hr>
-
-
-<!-- LIGHTBOX IMAGES  -->
-<div class="w3-container w3-padding-32" id="Bridal">
-    <h3 class="w3-padding-16">Bridal Collection</h3>
-</div>
-<!-- IMAGE 1  -->
-
-
-
-
-
-
-
 <hr>
+
+<!-- WHY IS THE SPACING OFF HERE????-->
 
    <!-- About Us Section w carousel-->
    <div class="w3-container w3-padding-32" id="AboutUs">
@@ -422,7 +570,7 @@
 <br>
 <hr>
 
- <!-- Youtube and Accordion Section -->
+ <!-- Youtube Section -->
  <div class="w3-padding-60" id="cuttery">
     <h3 class="w3-padding-10 w3-center">Explore MarieKay in Action</h3>
     <br>
@@ -467,32 +615,50 @@
   <!-- Appointments Section -->
   <div class="w3-container w3-padding-32" id="Appointment">
     <h3 class="w3-padding-16">Appointments</h3>
-    <table class="w3-table-all">
+
+
+  <!-- CREATE SORTABLE TABLE  -->
+  <div class="w3-padding-large">
+    <table id="myTable" class="w3-table-all">
+      <thead>
         <tr class="w3-purple w3-text-black">
           <th>SERVICE</th>
-          <th>1 HOUR</th>
-          <th>2 HOUR</th>
-          <th>3 HOUR</th>
+          <th>TYPE</th>
+          <th>TIME</th>
+          <th>COST</th>
         </tr>
-        <tr>
-          <td>BRIDAL</td>
-          <td>$50</td>
-          <td>$100</td>
-          <td>$400</td>
-        </tr>
-        <tr>
-            <td>STYLING</td>
-            <td>$55</td>
-            <td>$165</td>
-            <td>$350</td>
-        </tr>
-        <tr>
-            <td>GENERAL FITTING</td>   
-            <td>$55</td>
-            <td>$65</td>
-            <td>$105</td>
-        </tr>
-        </table>
+      </thead>
+      <tr class="w3-hover-pale-red">
+        <td><img src="./img/B3-BP423_OSCAR0_750RV_20180904163328.jpg" style="width: 120px" /></td>
+        <td>Bridal</td>
+        <td>1-3 hrs</td>
+        <td>$5,000-7,000</td>
+      </tr>
+      <tr class="w3-hover-pale-red">
+        <td>
+          <img src="./img/8a3b34_c2bf9f4089df49b89aa33c6e88455e28~mv2.webp" style="width: 120px " />
+        </td>
+        <td>Personal Stylist</td>
+        <td>1-3 hrs</td>
+        <td>$2,000-5,000</td>
+      </tr>
+      <tr class="w3-hover-pale-red">
+        <td><img src="./img/38629.jpg" style="width: 120px" /></td>
+        <td>General Fitting</td>
+        <td>1-2 hrs</td>
+        <td>$2,000-3,000</td>
+      </tr>
+      <tr class="w3-hover-pale-red">
+        <td>
+          <img src="./img/76720764_10157568024184876_2170149912702877696_n.jpg" style="width: 120px" />
+        </td>
+        <td>Private Event</td>
+        <td>1-6 hrs</td>
+        <td>TBD</td>
+      </tr>
+    </table>
+  </div>
+</div>
 
     <p>Lets get in touch and set up your next appointment.</p>
     <form action="/action_page.php" target="_blank">
@@ -573,7 +739,16 @@ if (x.className.indexOf("w3-show") == -1) {
 }
 }
 // end added for accordion
+$(document).ready(function () {
+        $("table#myTable").tablesorter({
+          sortList: [
+            [2, 1],
+          ] /* 1st number - column to sort, 2nd number - asending (2) or descending order (1) */,
+          CssAsc: "tablesorter-headerAsc",
+          CssDesc: "tablesorter-headerDesc",
+        });
+      });
+      // end added for sortable
     </script>
 
-</body>
 </html>
